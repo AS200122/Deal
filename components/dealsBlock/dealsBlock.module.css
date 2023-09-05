@@ -1,0 +1,12 @@
+.dealBlock {
+    width: 20%;
+    height: auto;
+    border: 2px dotted white;
+    border-top: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+    gap: 20px;
+}
