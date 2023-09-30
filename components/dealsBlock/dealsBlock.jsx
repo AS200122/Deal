@@ -1,42 +1,34 @@
 import cls from "./dealsBlock.module.css"
 import Deals from "../deals/deals"
-import { deal } from "@/pages/api/fakeData"
-import { useState } from "react"
 import Deal from "../deal/deal"
-import { allUsers } from "@/pages/api/fakeData"
+import { useSelector } from "react-redux"
 
-export default function DealBlock() {
-    const [deals, setDeals] = useState(deal)
-    const [dealsInfo, setDealsInfo] = useState(allUsers)
+export default function DealBlock({color,title,statusid}) {
+    const data = useSelector((state) => state.modalShow.data)
     return(
         <div className={cls.dealBlock}>
-             {
-         deals.map(({id,name,price},index) => {
-            return(
-               <Deals
-                  key={index}
-                  id={id}
-                  name={name}
-                  price={price}
-               />
-            )
-         })  
-
-         }
+            <Deals
+                color={color}
+                title={title}
+            />
+            <div className={cls.deal}>
          {
-            dealsInfo.map(({id,deal,price,data,person,user_id}) => {
-                return(
-                    <Deal
-                        id={id}
-                        deal={deal}
-                        price={price}
-                        data={data}
-                        person={person}
-                        user_id={user_id}
-                    />
-                )
+            data.map(({id,name,desc,user_id,status_id}) => {
+                if (status_id === statusid) {
+                    return(
+                        <Deal
+                            name={name}
+                            desc={desc}
+                            user_id={user_id}
+                            status_id={status_id}
+                            id={id}
+                        />
+                    )
+                }
+        
             })
          }
+         </div>
          
         </div>
     )

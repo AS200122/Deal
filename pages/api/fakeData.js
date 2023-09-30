@@ -18,29 +18,43 @@ export const userData = [
 }
 ]
 
-export const deal = [
-    {
-        id:1,
-        name:"New (4)",
-        price:"$46"
-    },
-]
-
 export const allUsers = [
     {
         id:1,
-        deal:"Deal #71",
-        price:"$413.91",
-        data:"yesterday 3:46",
-        person:"Emily Walker",
-        user_id:1
+        name:"Emily Walker",
+        user_id:1,
+        stattus_id:1,
+        img:"/1.jpeg"
+    },
+
+    {
+        id:2,
+        name:"Emily Walker",
+        user_id:2,
+        stattus_id:2,
+        img:"/1.jpeg"
+    },
+]
+
+export const status = [
+    {
+        value:1,
+        label:"backlog"
     },
     {
-        id:1,
-        deal:"Deal #78881",
-        price:"$413.91",
-        data:"yesterday 3:46",
-        person:"Emily Walker",
-        user_id:1
+        value:2,
+        label:"in progres"
+    },
+    {
+        value:3,
+        label:"testing"
+    },
+    {
+        value:4,
+        label:"done"
+    },
+    {
+        value:5,
+        label:"reales"
     },
 ]

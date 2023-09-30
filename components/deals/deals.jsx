@@ -1,14 +1,17 @@
 import cls from "./deals.module.css"
-import { deal } from "@/pages/api/fakeData"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
 
-export default function Deals() {
+export default function Deals({color,title}) {
     return(
             <div className={cls.quickDeal}>
-                <div className={cls.header}>
-                    <p>New (4)</p>
+                <div style={{backgroundColor: color}} className={cls.header}>
+                    <p>{title}</p>
                 </div>
-                <p className={cls.money}>$46</p>
-                <button className={cls.quickButton}>+ Quick Deal</button>
+                <div className={cls.money}>
+                    <p>$46</p>
+                </div>
+                <FontAwesomeIcon style={{fontSize:22,cursor:"pointer"}}  icon={faPlus} />
             </div>
     )
 }

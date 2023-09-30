@@ -1,30 +1,91 @@
 .deal{
-    width: 100%;
-    height: 400px;
+    width: 95%;
+    height: 240px;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 30px;
     border-radius: 10px;
     color: black;
+    border: 2px dotted white;
 }
 
 .dealInfo{
-    width: 70%;
+    width: 50%;
     height: auto;
     display: flex;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
+    font-size: 20px;
+    gap: 12px;
+}
+
+.dealRight{
+    width: 30%;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
     gap: 20px;
+    position: relative;
+    left: 10px;
+    top: -28px;
+}
+
+.edit{
+    color: #0f0;
+}
+
+.footer{
+    width: 90%;
+    height: 30px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.smsNumber{
+    width: 25px;
+    height: 25px;
+    background-color: #333;
+    border-radius: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.responsPerson{
+    font-size: 14px;
+    color: #333;
 }
 
 .person{
     width: 100%;
-    height: 30px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 10px;
+    font-size: 18px;
+}
+
+.personName{
+    font-size: 16px;
+    color: #333;
 }
